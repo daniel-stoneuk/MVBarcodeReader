@@ -483,7 +483,6 @@ public class BarcodeCaptureFragment extends Fragment implements View.OnTouchList
                     new Handler(Looper.getMainLooper()).post(new Runnable() {
                         @Override
                         public void run() {
-                            if (mCameraSource != null) mCameraSource.stop();
                             mListener.onBarcodeScanned(barcode);
                             isListenerBusy = false;
                         }
